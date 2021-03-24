@@ -1,0 +1,21 @@
+##### ##### ##### ##### ##### ##### ##### ##### ##### #####
+
+##### FRAMEWORKS INICIAIS #####
+
+django => Base para desenvolvimento Django Web
+gunicorn => Rodas o projeto no Servidor
+dj-static = Para rodas os arquivos estáticos no servidor (static files)
+
+    pip install django gunicorn dj-static
+
+##### ##### ##### ##### ##### ##### ##### ##### ##### #####
+
+
+
+##### ##### ##### ##### ##### ##### ##### ##### ##### #####
+
+##### Futuras Bibliotecas #####
+
+Psycog2-Binary => Para trabalhar com banco de dados Postgrees SQL => pip install psycog2-binary
+
+##### ##### ##### ##### ##### ##### ##### ##### ##### #####

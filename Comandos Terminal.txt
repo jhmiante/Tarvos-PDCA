@@ -1,0 +1,24 @@
+
+PROJECT
+    django-admin startproject tarvospdca .
+
+APPS
+    django-admin startapp pdca
+
+MIGRATE
+    python manage.py makemigrations
+    python manage.py migrate
+
+USUARIO
+    python manage.py createsuperuser
+
+SERVIDOR
+    python manage.py runserver
+
+
+
+### TESTE SHELL ###
+
+    from usuario.models import CustomUser
+    usuario = CustomUser.objects.all()
+

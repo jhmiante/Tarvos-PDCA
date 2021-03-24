@@ -1,0 +1,15 @@
+__pucache__
+
+*.*-
+
+*.pyc
+
+.idea
+
+.env
+
+venv
+
+template/*
+
+htmlcov/*
