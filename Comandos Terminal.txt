@@ -6,8 +6,8 @@ APPS
     django-admin startapp pdca
 
 MIGRATE
-    python manage.py makemigrations
-    python manage.py migrate
+python manage.py makemigrations
+python manage.py migrate
 
 USUARIO
     python manage.py createsuperuser

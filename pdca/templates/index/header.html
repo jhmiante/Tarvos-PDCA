@@ -1,0 +1,68 @@
+{% load static %}
+
+<!-- incluso em index -->
+
+  <header id="home">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light ">
+        <!-- Change Logo Img Here -->
+        <a class="navbar-brand" href="#"><img src="{% static 'images/logo.png' %}" alt="" style="max-width: 150px" class="img-fluid"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="interactive-menu-button">
+            <a href="#">
+              <span>Menu</span>
+            </a>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item">
+              <!-- Nav Link -->
+              <a class="nav-link" data-scroll href="#next-projects">Próximos Projetos</a>
+            </li>
+            <li class="nav-item">
+              <!-- Nav Link -->
+              <a class="nav-link" data-scroll href="#projetos">Projetos</a>
+            </li>
+
+            {% if user.is_active %}
+              <li class="nav-item">
+                <!-- Nav Link -->
+                <a class="nav-link" data-scroll href="{% url 'painel' %}">Painel</a>
+              </li>
+            {% endif %}
+
+
+          </ul>
+
+          <form data-scroll href="" class="contact-btn form-inline my-2 my-lg-0">
+            <!-- Control Button -->
+
+            {% if user.is_staff %}
+              <a class="btn btn-info mr-1" href="admin">Painel ADM</a>
+            {% endif %}
+
+            {% if user.is_anonymous %}
+              <a class="btn btn-primary" href="{% url 'login' %}">Login</a>
+            {% else %}
+              <a class="btn btn-primary" href="{% url 'logout' %}">Logout</a>
+            {% endif %}
+
+          </form>
+
+        </div>
+      </nav>
+    </div>
+
+    {% if user.is_active %}
+    <div class="alert alert-primary" role="alert">
+                Seja bem-vindo(a) {{ user.get_full_name }}! | Você está logado com pela empresa: {{ user.empresa }}
+    </div>
+    {% endif %}
+
+    <!-- HERO SECTION -->
+      {% include 'index/hero.html' %}
+
+  </header>

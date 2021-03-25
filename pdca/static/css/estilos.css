@@ -1,0 +1,10 @@
+.mtop-5 {
+     margin-top: 5%;
+}
+
+m-img-w-100 {
+    max-width:100px;
+    max-height:70px;
+    width: auto;
+    height: auto;
+}

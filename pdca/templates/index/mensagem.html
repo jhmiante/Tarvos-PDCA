@@ -1,0 +1,51 @@
+{% load static %}
+
+<!-- incluso em index -->
+
+  <section class="about">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-12 col-sm-12 col-lg-6">
+          <img src="{% static 'images/aboutimg.svg' %}" alt="">
+        </div>
+
+        <div class="col-12 col-sm-12 col-lg-6">
+
+          <h5>Com a Tarvos a</h5>
+          <h2>
+            {% if user.is_anonymous %}
+              Sua Empresa
+            {% else %}
+              {{ user.empresa }}
+            {% endif %}
+          </h2>
+          <!-- Replace About Us Text Under -->
+          <p>
+              Poderá ter um controle de despesas da forma que imagina
+              <br>
+              Juntos podemos criar os projetos de controle e analise de despesas que a
+
+              {% if user.is_anonymous %}
+                Sua Empresa
+              {% else %}
+                {{ user.empresa }}
+              {% endif %}
+
+               precisa.
+
+          </p>
+
+            <p>
+                Juntos vamos longe.
+            </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>

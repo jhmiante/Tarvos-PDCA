@@ -1,0 +1,33 @@
+{% load static %}
+
+<!-- incluso em index -->
+
+<footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3>TARVOS</h3>
+          <h2 class="text-white">SOLUÇÕES EM PROJETOS</h2>
+          <ul class="contact-nav">
+            <li><a data-scroll href="#home">Inicio</a></li>
+            <li><a data-scroll href="#next-projects">Próximos Projetos</a></li>
+            <li><a data-scroll href="#projetos">Projetos</a></li>
+
+            {% if user.is_active %}
+              <li>
+                <!-- Nav Link -->
+                <a data-scroll href="{% url 'painel' %}">Painel</a>
+              </li>
+            {% endif %}
+
+
+          </ul>
+
+            <h6><a href="https://www.graphberry.com/item/doob-free-agency-html-template" target="_blank" class="text-white">@ Template Doob</a></h6>
+            <br>
+            <h6>@2021 - Tarvos</h6>
+
+        </div>
+      </div>
+    </div>
+  </footer>
