@@ -2,12 +2,11 @@ from django.urls import path
 from django.views.generic.base import TemplateView
 
 
-from . import views as vw
-from . import classViews as cw
+from . import views as view
 
 urlpatterns = [
-    path('pdca/', vw.PDCA, name='pdca'),
-    path('pdca/add', cw.AddPdcaView.as_view(), name='pdca-add'),
-    path('pdca/item', cw.PDCAitem.as_view(), name='pdca-item'),
-    path('pdca/finalizados', vw.PDCAfinalizados, name='pdca-finalizados')
+    path('pdca/', view.PDCA, name='pdca'),
+    path('pdca/add', view.AddPdcaView.as_view(), name='pdca-add'),
+    path('pdca/item', view.PDCAitem.as_view(), name='pdca-item'),
+    path('pdca/finalizados', view.PDCAfinalizados, name='pdca-finalizados')
 ]
