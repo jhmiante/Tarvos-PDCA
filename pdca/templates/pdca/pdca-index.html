@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+{% if user.is_active %}
+
+    {% include 'pdca/header.html' %}
+
+    PDCA Item
+{% else %}
+
+Restrito
+
+{% endif %}
+
+
+{% endblock %}

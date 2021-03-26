@@ -5,8 +5,9 @@
 django => Base para desenvolvimento Django Web
 gunicorn => Rodas o projeto no Servidor
 dj-static = Para rodas os arquivos estáticos no servidor (static files)
+django-bootstrap4 => Bootstrap 4 for django
 
-    pip install django gunicorn dj-static
+    pip install django gunicorn dj-static django-bootstrap4
 
 ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 
